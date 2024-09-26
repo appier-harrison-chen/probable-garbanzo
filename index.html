@@ -30,6 +30,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-384818780"></script>
     <script>
         var userId = Math.floor(Date.now() / 1000) % 100000;
+
+        require(["crypto-js/aes", "crypto-js/sha256"], function (AES, SHA256)
+        {
+            console.log(userId);
+            console.log(SHA256(userId));
+        });
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
