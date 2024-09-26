@@ -15,7 +15,7 @@
     </script>
     <!-- End Google Tag Manager -->
     <!-- Event snippet for test_on_pageview conversion page -->
-    <script>
+    <!-- <script>
         var userId = Math.floor(Date.now() / 1000) % 100000;
 
         console.log("Generated user_id: " + userId);
@@ -24,16 +24,24 @@
             'send_to': 'AW-384818780/XmMrCMz5pNYZENy8v7cB',
             'user_id': userId,
         });
-    </script>
+    </script> -->
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-384818780"></script>
     <script>
+        var userId = Math.floor(Date.now() / 1000) % 100000;
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'AW-384818780');
+
+        console.log("Generated user_id: " + userId);
+
+        gtag('event', 'conversion', {
+            'send_to': 'AW-384818780/XmMrCMz5pNYZENy8v7cB',
+            'user_id': userId,
+        });
     </script>
 
     <meta charset="UTF-8">
