@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager
     <script>
         (function(w,d,s,l,i){
             w[l]=w[l]||[];
@@ -12,15 +12,28 @@
             j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
             f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-TG3BMP9R');
-    </script>
-
+    </script> -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-384818780"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+
+        var userId = "www_" + (Date.now() % 100000);
+        var productid = "AWS_" + (Date.now() % 10000);
+
         gtag('js', new Date());
 
         gtag('config', 'AW-384818780');
+        gtag('event', 'page_view', {
+          'send_to': 'AW-384818780',
+          'user_id': userId,
+          'value': '30.0',
+          'items': [{
+            'id': productid,
+            'google_business_vertical': 'retail'
+          }]
+        });
     </script>
 
     <meta charset="UTF-8">
@@ -29,12 +42,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG3BMP9R"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <header>
         <h1>Welcome to My Simple Website</h1>
@@ -46,6 +53,7 @@
         <button onclick="alert('Button 2 Clicked!')">Button 2</button>
         <button onclick="alert('Button 3 Clicked!')">Button 3</button>
         <button onclick="alert('Button 4 Clicked!')">Button 4</button>
+        <button onclick="alert('Button X Clicked!')">Button 5</button>
     </section>
 
     <footer>
